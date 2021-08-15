@@ -1,65 +1,54 @@
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  text-align: center;
-}
-
-.dropdown-item {
-  padding: 5% 0%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.dropdown-menu {
-  display: flex;
-  height: 5%;
-}
-
-.menu-button {
-  width: 12.5vw;
-  height: 100%;
-  font-size: large;
-  border: none;
-  background-color: lightgray;
-  text-align: center;
-}
-
-.dropdown-content {
-  height: max-content;
-  overflow: auto;
-  width: 12.5vw;
-  background-color: lightgray;
+.taskbar {
   margin: 0;
+  background: pink;
+  width: 100%;
+}
+
+.taskbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+  width: 10vw;
+  background: pink;
+}
+
+nav ul li ul {
+  position: absolute;
+  top: 50px;
   display: none;
 }
 
-.letters-button:hover .letters-content {
+nav li:hover > ul {
   display: block;
 }
 
-#symbols-button:active .symbols-content {
+nav ul li:hover {
+  background-color: aqua;
+}
+
+nav a {
   display: block;
+  padding: 0 15px;
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
 }
 
-/*.dropdown-menu:hover .dropdown-content {
-  display: block;
-}*/
-
-.dropdown-item:hover {
-  background-color: lightcoral;
-}
-
-#symbols-button:hover .menu-button {
-  color: blue;
-}
-
-.menu-button:hover {
-  background-color: lightcoral;
-  color: brown;
+.button {
+  width: 20%;
 }
