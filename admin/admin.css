@@ -1,0 +1,11 @@
+body {
+  font-family: "Lato", "Helvetica";
+  background-color: #232323;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.exercise {
+  display: none;
+}

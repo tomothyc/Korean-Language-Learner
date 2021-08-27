@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="admin.css" type="text/css" />
+    <script src="admin.js"></script>
+  </head>
+
+  <body>
+    <h1>Admin page</h1>
+    <form>
+      Select Step:
+      <select id="step">
+        <option value="default">-</option>
+        <option selected value="letters" id="letters">Letters</option>
+        <option value="syllables" id="syllables">Syllables</option>
+        <option value="words" id="words">Words</option>
+        <option value="shortsent" id="shortsent">Short sentences</option>
+        <option value="longsent" id="longsent">Long sentences</option>
+        <option value="dictation" id="dictation">Dictation</option>
+      </select>
+
+      Select exercise:
+      <select class="exercise" id="lettersexercise">
+        <option value="Lhand">Left hand</option>
+        <option value="Rhand">Right hand</option>
+        <option value="Bhand">Both hands</option>
+        <option value="SLhand">Shift Left hand</option>
+        <option value="SRhand">Shift Right hand</option>
+        <option value="Allletters">All Letters</option>
+      </select>
+      <select class="exercise" id="syllablesexercise">
+        <option value="CV">2 letters</option>
+        <option value="SCV">2 letters + shift</option>
+        <option value="CVC">3 letters</option>
+        <option value="SCVC">3 letters + shift</option>
+        <option value="CVCC">4 letters</option>
+      </select>
+      <select class="exercise" id="wordsexercise">
+        <option value="2syl">2 syllables without ending consonant</option>
+        <option value="3syl">3 syllables without ending consonant</option>
+        <option value="2sylC">2 syllables with ending consonant</option>
+        <option value="3sylC">3 syllables without ending consonant</option>
+        <option value="4syl">Longer than 3 syllables</option>
+      </select>
+      <select class="exercise" id="dictationexercise">
+        <option value="Wdictation">Word dictation</option>
+        <option value="Sdictation">Short sentence dictation</option>
+        <option value="ldictation">Long sentence dictation</option>
+      </select>
+    </form>
+  </body>
+</html>
