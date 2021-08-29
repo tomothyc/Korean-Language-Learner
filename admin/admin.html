@@ -15,8 +15,8 @@
 
   <body>
     <h1>Admin page</h1>
-    <form>
-      Select Step:
+    <form class="container">
+      <div class="stepheader">Select Step:</div>
       <select id="step" onchange="setDefault()">
         <option value="default">-</option>
         <option selected value="letters" id="letters">Letters</option>
@@ -27,7 +27,7 @@
         <option value="dictation" id="dictation">Dictation</option>
       </select>
 
-      Select exercise:
+      <div id="exercisespecific">Select exercise:</div>
       <select class="exercise" id="lettersexercise">
         <option value="default">-</option>
         <option value="Lhand">Left hand</option>

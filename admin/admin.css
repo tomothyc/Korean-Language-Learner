@@ -9,3 +9,22 @@ body {
 .exercise {
   display: none;
 }
+
+.container {
+  margin: 20px;
+  align-items: center;
+  display: inline-block;
+}
+
+.stepheader {
+  font-size: xx-large;
+}
+
+#exercisespecific {
+  font-size: xx-large;
+}
+
+select {
+  min-width: 25vw;
+  font-size: large;
+}

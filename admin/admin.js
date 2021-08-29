@@ -13,9 +13,12 @@ function init() {
   for (var i = 0; i < exercises.length; i++) {
     exercises[i].style.display = "none";
   }
-
+  document.getElementById("exercisespecific").style.display = "block";
   var option = document.getElementById("step").value;
-  console.log(option);
+  if (option == "shortsent" || option == "longsent" || option == "default") {
+    document.getElementById("exercisespecific").style.display = "none";
+  }
+
   if (option == "letters") {
     document.getElementById("lettersexercise").style.display = "block";
   }
