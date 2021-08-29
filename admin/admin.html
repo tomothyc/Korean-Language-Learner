@@ -17,7 +17,7 @@
     <h1>Admin page</h1>
     <form>
       Select Step:
-      <select id="step">
+      <select id="step" onchange="setDefault()">
         <option value="default">-</option>
         <option selected value="letters" id="letters">Letters</option>
         <option value="syllables" id="syllables">Syllables</option>
@@ -29,6 +29,7 @@
 
       Select exercise:
       <select class="exercise" id="lettersexercise">
+        <option value="default">-</option>
         <option value="Lhand">Left hand</option>
         <option value="Rhand">Right hand</option>
         <option value="Bhand">Both hands</option>
@@ -37,6 +38,7 @@
         <option value="Allletters">All Letters</option>
       </select>
       <select class="exercise" id="syllablesexercise">
+        <option value="default">-</option>
         <option value="CV">2 letters</option>
         <option value="SCV">2 letters + shift</option>
         <option value="CVC">3 letters</option>
@@ -44,6 +46,7 @@
         <option value="CVCC">4 letters</option>
       </select>
       <select class="exercise" id="wordsexercise">
+        <option value="default">-</option>
         <option value="2syl">2 syllables without ending consonant</option>
         <option value="3syl">3 syllables without ending consonant</option>
         <option value="2sylC">2 syllables with ending consonant</option>
@@ -51,6 +54,7 @@
         <option value="4syl">Longer than 3 syllables</option>
       </select>
       <select class="exercise" id="dictationexercise">
+        <option value="default">-</option>
         <option value="Wdictation">Word dictation</option>
         <option value="Sdictation">Short sentence dictation</option>
         <option value="ldictation">Long sentence dictation</option>

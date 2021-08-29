@@ -1,5 +1,13 @@
 window.onchange = init;
 window.onload = init;
+
+function setDefault() {
+  var exercises = document.getElementsByClassName("exercise");
+  for (var i = 0; i < exercises.length; i++) {
+    exercises[i].value = "default";
+  }
+}
+
 function init() {
   var exercises = document.getElementsByClassName("exercise");
   for (var i = 0; i < exercises.length; i++) {
