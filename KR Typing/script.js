@@ -17,7 +17,7 @@ keyboardBtn.addEventListener('click', () => {
 });
 
 const words = vocab;
-const DEFAULT_TIME = 5;
+const DEFAULT_TIME = 30;
 
 let time = DEFAULT_TIME;
 let score;
