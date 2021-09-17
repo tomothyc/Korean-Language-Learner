@@ -1,4 +1,16 @@
-/* Adapted from https://www.youtube.com/watch?v=960mgtEarfs&t=355s and https://css-tricks.com/snippets/css/clear-fix/ */
+/******************************************************
+ Adapted from https://www.youtube.com/watch?v=960mgtEarfs&t=355s and https://css-tricks.com/snippets/css/clear-fix/ 
+Adapted from: 
+Title: Simple Dropdown Menu Bar using only HTML & CSS
+Author: CodingNepal
+Date: 27/09/2019
+Availability: https://www.youtube.com/watch?v=960mgtEarfs&t=355s 
+ 
+Title: The Clearfix: Force an Element To Self-Clear its Children
+Author: Chris Coyier
+Date: 10/08/2009
+Availability: https://css-tricks.com/snippets/css/clear-fix/
+*******************************************************/
 
 body {
   margin: 0;
