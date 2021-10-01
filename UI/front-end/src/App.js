@@ -11,6 +11,10 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardAdmin from "./components/BoardAdmin";
+<<<<<<< HEAD
+=======
+import Learn from "./components/Learn";
+>>>>>>> 26a68b3226d2fea4d012aaae29050eb29150d13f
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -21,7 +25,11 @@ const App = () => {
   const [showAdminBoard, setShowAdminBoard] = useState(false);
   const [showUserBoard, setShowUserBoard] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+<<<<<<< HEAD
   const { user: currentUser } = useSelector(state => state.auth);
+=======
+  const { user: currentUser } = useSelector((state) => state.auth);
+>>>>>>> 26a68b3226d2fea4d012aaae29050eb29150d13f
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -38,7 +46,11 @@ const App = () => {
       }
     }
 
+<<<<<<< HEAD
     history.listen(location => {
+=======
+    history.listen((location) => {
+>>>>>>> 26a68b3226d2fea4d012aaae29050eb29150d13f
       dispatch(clearMessage()); // clear message when changing location
     });
   }, [dispatch]);
@@ -78,6 +90,17 @@ const App = () => {
             )}
           </div>
 
+<<<<<<< HEAD
+=======
+          <div className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link to={"/learn"} className="nav-link">
+                Learn
+              </Link>
+            </li>
+          </div>
+
+>>>>>>> 26a68b3226d2fea4d012aaae29050eb29150d13f
           {currentUser ? (
             <div className="navbar-nav ml-auto">
               <li className="nav-item">
@@ -116,6 +139,10 @@ const App = () => {
             <Route exact path="/profile" component={Profile} />
             <Route path="/user" component={BoardUser} />
             <Route path="/admin" component={BoardAdmin} />
+<<<<<<< HEAD
+=======
+            <Route exact path="/learn" component={Learn} />
+>>>>>>> 26a68b3226d2fea4d012aaae29050eb29150d13f
           </Switch>
         </div>
       </div>
