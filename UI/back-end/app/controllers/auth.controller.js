@@ -9,14 +9,16 @@ var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
 exports.insertAdmin = expressAsyncHandler(async (req, res) => {
-  console.log(admin);
+  // console.log(admin);
   await User.remove({});
   const createdUsers = await User.insertMany(admin);
   res.send({ createdUsers });
   res.json({ message: `Insert admin: ${admin}` });
 });
 
-exports.signup = (req, res) => {
+exports.getAll = async (req, res) => {};
+
+exports.signup = async (req, res) => {
   const user = new User({
     username: req.body.username,
     studentNumber: req.body.studentNumber,
@@ -24,7 +26,7 @@ exports.signup = (req, res) => {
     password: bcrypt.hashSync(req.body.password, 8)
   });
 
-  user.save((err, user) => {
+  await user.save((err, user) => {
     if (err) {
       res.status(500).send({ message: err });
       return;

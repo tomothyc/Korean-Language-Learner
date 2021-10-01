@@ -8,7 +8,11 @@ module.exports = function(app) {
     );
     next();
   });
-  app.get("/api/hangul/letters", controller.letters);
 
-  app.post("/api/hangul/addLetter", controller.addLetter);
+  app.get("/api/hangul/getVocab", controller.getVocab);
+
+  app.get("/api/hangul/seed", controller.addDummyVocab);
+
+  app.post("/api/hangul/addVocab", controller.addVocab);
+  // app.delete("/api/hangul/deleteVocab", controller.deleteVocab);
 };
