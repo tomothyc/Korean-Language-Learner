@@ -8,7 +8,6 @@ import img from '../static/img/hp2.jpg';
 const Home = () => {
   const [content, setContent] = useState("");
 
-    
   const history = useHistory();
  
   const loginPage = () =>{ 
@@ -22,42 +21,17 @@ const Home = () => {
   const instPage = () =>{ 
     let path = `./instructions`; 
     history.push(path);
-  }
-  
-  const css = `
-    .header {
-      color: #779ecb;
-      font-size: xx-large;
-      font-weight: bolder;
-      text-decoration: underline;
-    }
-
-    .bod {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .im {
-      padding: 20px;
-    }
-
-    .l {
-      list-style-type:none;
-    }
-  `
+  } 
 
   return (
     <div class="bod">
-
-      <div class="header">
-        <style>{css}</style>
+      <div class="home_h">
         <p> Welcome to KrType! </p>
       </div>
       
       <p> This website is designed to help you improve your Korean typing skills. <br />
         Create an account or login to get started! 
       </p>
-      <div className="form-group"></div>
         <button className="get-button btn btn-primary btn-block" onClick={regoPage}>
         REGISTER HERE
         </button>

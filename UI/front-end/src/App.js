@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardAdmin from "./components/BoardAdmin";
+import Instructions from "./components/Instructions";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -114,6 +115,7 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
+            <Route exact path="/instructions" component={Instructions} />
             <Route path="/user" component={BoardUser} />
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
