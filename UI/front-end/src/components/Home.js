@@ -12,15 +12,15 @@ const Home = () => {
   const history = useHistory();
  
   const loginPage = () =>{ 
-    let path = `./Login.js`; 
+    let path = `./login`; 
     history.push(path);
   }
   const regoPage = () =>{ 
-    let path = `./Register.js`; 
+    let path = `./register`; 
     history.push(path);
   }
   const instPage = () =>{ 
-    let path = `./Instructions.js`; 
+    let path = `./instructions`; 
     history.push(path);
   }
   
