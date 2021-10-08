@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>KR Typing</title>
+  </head>
+  <body>
+
+    <main class="container">
+      <section class="word">
+        <h2 class="word_current" id="currentWord">Korean Typing</h2>
+        <p class="word_translation" id="translation">Practice!</p>
+
+        <input
+          type="text"
+          class="word_input"
+          id="wordInput"
+          placeholder=""
+          disabled
+        />
+        <p class="message" id="message"></p>
+      </section>
+
+      <section class="controls">
+
+        <button class="btn-start" id="startBtn">START</button>
+      </section>
+
+      <section class="kb">
+        <figure class="keyboard">
+          <img class="keyboard_img" src="keyboard.png" alt="Korean Keyboard" />
+        </figure>
+        <button class="btn-keyboard"> ⌨ </button>
+      </section>
+    </main>
+
+    <script src="vocab1.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
