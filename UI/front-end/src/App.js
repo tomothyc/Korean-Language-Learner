@@ -11,7 +11,9 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardAdmin from "./components/BoardAdmin";
+import LearnDropdown from "./components/LearnDropdown";
 import Instructions from "./components/Instructions";
+import Challenge from "./components/Challenge";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
@@ -23,7 +25,7 @@ const App = () => {
   const [showAdminBoard, setShowAdminBoard] = useState(false);
   const [showUserBoard, setShowUserBoard] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const { user: currentUser } = useSelector(state => state.auth);
+  const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -40,7 +42,7 @@ const App = () => {
       }
     }
 
-    history.listen(location => {
+    history.listen((location) => {
       dispatch(clearMessage()); // clear message when changing location
     });
   }, [dispatch]);
@@ -60,6 +62,16 @@ const App = () => {
             <li className="nav-item">
               <Link to={"/home"} className="nav-link">
                 Home
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <LearnDropdown />
+            </li>
+
+            <li className="nav-item">
+              <Link to={"/challenge"} className="nav-link">
+                Challenge
               </Link>
             </li>
 
@@ -116,10 +128,10 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/instructions" component={Instructions} />
-            <Route exact path="/practice" component={Practice} />
-            <Route path="/user" component={BoardUser} />
             <Route path="/admin" component={BoardAdmin} />
+            <Route path="/challenge" component={Challenge} />
+            <Route path="/practice/:step/:exercise" component={BoardUser} />
+            <Route path="/instructions" component={Instructions} />
           </Switch>
         </div>
       </div>

@@ -494,6 +494,9 @@ form.container {
   -o-border-radius: 15px;
 }
 
+.nav-link:hover {
+  background-color: #779ecb;
+}
 .home_h {
   color: #779ecb;
   font-size: xx-large;
@@ -511,13 +514,12 @@ form.container {
 }
 
 .l {
-  list-style-type:none;
+  list-style-type: none;
 }
 
 .l1 {
   list-style-type: "→   ";
 }
-
 
 .imgs {
   display: block;
