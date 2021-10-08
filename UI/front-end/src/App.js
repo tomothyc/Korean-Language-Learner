@@ -17,6 +17,7 @@ import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
+import Practice from "./components/Practice";
 
 const App = () => {
   const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -116,6 +117,7 @@ const App = () => {
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/instructions" component={Instructions} />
+            <Route exact path="/practice" component={Practice} />
             <Route path="/user" component={BoardUser} />
             <Route path="/admin" component={BoardAdmin} />
           </Switch>
