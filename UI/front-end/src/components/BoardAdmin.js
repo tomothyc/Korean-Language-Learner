@@ -49,13 +49,17 @@ const AdminUser = () => {
 
   const handleSelection = e => {
     e.preventDefault();
-    server.getLetters(step, exercise).then(rsp => {
+    server.getVocab(step, exercise).then(rsp => {
       setVocab(rsp.vocab);
       setSuccessfulGet(true);
       console.log(successfulGet);
     });
   };
 
+  const handleDelete = (letter) => {
+    console.log("YES")
+    server.deleteVocab(letter.step, letter.exercise, letter.en, letter.kr)
+  }
   const returnExercise = step => {
     switch (step) {
       default:
@@ -123,7 +127,7 @@ const AdminUser = () => {
   const handleRegister = e => {
     e.preventDefault();
     console.log(step, exercise, letter, hangul);
-    if (checkBtn.current.context._errors.length === 0) {
+   
       dispatch(addVocab(step, exercise, letter, hangul))
         .then(() => {
           setSuccessful(true);
@@ -131,7 +135,7 @@ const AdminUser = () => {
         .catch(() => {
           setSuccessful(false);
         });
-    }
+    
   };
 
   const handleClick = () => {
@@ -247,7 +251,7 @@ const AdminUser = () => {
               {vocab.map(letter => {
                 return (
                   <div className="letter-card">
-                    <button className="remove-button">
+                    <button onClick={handleDelete.bind(this, letter)} className="remove-button">
                       <FontAwesomeIcon className="cross-icon" icon={faTimes} />
                     </button>
                     <p>{letter.kr}</p>

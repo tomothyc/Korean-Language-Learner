@@ -14,5 +14,5 @@ module.exports = function(app) {
   app.get("/api/hangul/seed", controller.addDummyVocab);
 
   app.post("/api/hangul/addVocab", controller.addVocab);
-  // app.delete("/api/hangul/deleteVocab", controller.deleteVocab);
+  app.delete("/api/hangul/deleteVocab", controller.deleteVocab);
 };

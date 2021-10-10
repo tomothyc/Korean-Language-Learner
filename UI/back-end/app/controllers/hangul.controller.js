@@ -18,7 +18,6 @@ exports.getVocab = async (req, res) => {
     exercise: req.query.exercise
   }).exec((err, vocab) => {
     res.send({ vocab });
-    // Prints "Space Ghost is a talk show host."
   });
 };
 
@@ -41,26 +40,27 @@ exports.addVocab = async (req, res) => {
   });
 };
 
-// exports.deleteLetter = (req, res) => {
-//   const letter = new Letter({
-//     kr: req.body.kr,
-//     en: req.body.en
-//   });
+exports.deleteVocab =  (req, res) => {
+   Vocab.find({
+    step: req.query.step,
+    exercise: req.query.exercise, 
+    en: req.query.en,
+    kr:req.query.kr
+  }).exec((err, vocab) => {
+      Vocab.findOneAndRemove({step: vocab.step, exercise: vocab.exercise, en:vocab.en, kr:vocab.kr
+      }, (err, vocab) => { 
+        console.log(vocab)
+        if (err) {
+          res.status(500).send({ message: err });
+          return;
+        } else {
+          res.send({ message: "Letter was deleted!" });
+        }
+      })
+    })
 
-//   letters.findOne({ letter }, (err, letter) => {
-//     if (err) {
-//       res.send(500).send({ message: err });
-//       return;
-//     } else {
-//       letter.deleteOne((err, letter) => {
-//         if (err) {
-//           res.status(500).send({ message: err });
-//           return;
-//         } else {
-//           console.log(letter);
-//           res.send({ message: "Letter was deleted!" });
-//         }
-//       });
-//     }
-//   });
-// };
+  }
+ 
+
+   
+ 

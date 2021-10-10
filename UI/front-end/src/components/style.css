@@ -125,7 +125,7 @@ label {
 }
 
 .letter-card {
-  width: 47px;
+  width:47px;
   background-color: #779ecb;
   padding: 0px 15px 5px;
   margin: 10px 10px;
@@ -503,31 +503,32 @@ form.container {
 }
 
 /* Counter */
-.timer-container {
-  display: flex;
-  text-align: center;
+.timer-container{
+  display:flex;
+  text-align:center;
+ 
 }
-.timer-title {
-  margin-bottom: 5px;
-  margin-right: 3px;
+.timer-title{
+  margin-bottom:5px;
+  margin-right:3px;
 }
-.timer {
+.timer{
   width: 10px;
   height: 30px;
 }
 
-.vocab {
-  font-size: 35px;
+.vocab{
+  font-size:35px;
 }
-.game_title {
-  margin-bottom: 50px;
+.game_title{
+  margin-bottom:50px;
 }
 
-.word_translation {
+.word_translation{
   text-align: center;
 }
 
-.vocab-container {
-  text-align: center;
-  margin: auto;
+.vocab-container{
+  text-align:center;
+  margin:auto;
 }

@@ -2,13 +2,13 @@ import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/hangul/";
 
-const getLetters = (step, exercise) => {
+const getVocab = (step, exercise) => {
   return axios
     .get(API_URL + `getVocab?step=${step}&exercise=${exercise}`, {})
-    .then(response => {
+    .then((response) => {
       return response.data;
     })
-    .catch(error => alert(`Error: ${error}`));
+    .catch((error) => alert(`Error: ${error}`));
 };
 
 const addVocab = (step, exercise, en, kr) => {
@@ -16,7 +16,20 @@ const addVocab = (step, exercise, en, kr) => {
     step,
     exercise,
     en,
-    kr
+    kr,
   });
 };
-export default { getLetters, addVocab };
+
+const deleteVocab = (step, exercise, en, kr) => {
+  console.log(step, exercise, kr, en);
+  return axios.delete(
+    API_URL + `deleteVocab?step=${step}&exercise=${exercise}&en=${en}&kr=${kr}`,
+    {
+      step,
+      exercise,
+      en,
+      kr,
+    }
+  );
+};
+export default { getVocab, addVocab, deleteVocab };

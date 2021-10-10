@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-//import { Button } from "react-bootstrap";
 import Collapse from "react-bootstrap/Collapse";
 
-import UserService from "../services/user.service";
 import keyboard from "../static/img/keyboardImg.png";
 
 import "./instructions.css";

@@ -13,12 +13,9 @@ const Profile = () => {
     <div className="container">
       <header className="jumbotron">
         <h3>
-          <strong>{currentUser.username}</strong> Profile
+          <strong>{currentUser.username}</strong>'s Profile
         </h3>
       </header>
-      <p>
-        <strong>Id:</strong> {currentUser.id}
-      </p>
       <p>
         <strong>Email:</strong> {currentUser.email}
       </p>

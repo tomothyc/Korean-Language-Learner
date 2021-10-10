@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Letters from "./Learn-menu/Letters";
 import Syllables from "./Learn-menu/Syllables";
 import Words from "./Learn-menu/Words";
@@ -51,12 +51,12 @@ const LearnDropdown = () => {
             <Dictation />
           </li>
           <li className="nav-item">
-            <Link to={"/practice/shortsent"} className="nav-link">
+            <Link to={"/practice/shortsent/shortsent"} className="nav-link">
               5 Short Sentences
             </Link>
           </li>
           <li className="nav-item">
-            <Link to={"/practice/longsent"} className="nav-link">
+            <Link to={"/practice/longsent/longsent"} className="nav-link">
               6 Long Sentences
             </Link>
           </li>

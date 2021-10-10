@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Router, Switch, Route, Link } from "react-router-dom";
 
+import server from "./services/hangul.service";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
@@ -11,15 +12,15 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardAdmin from "./components/BoardAdmin";
-import LearnDropdown from "./components/LearnDropdown";
 import Instructions from "./components/Instructions";
 import Challenge from "./components/Challenge";
+
+import LearnDropdown from "./components/LearnDropdown";
 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
 import { history } from "./helpers/history";
-import Practice from "./components/Practice";
 
 const App = () => {
   const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -75,14 +76,6 @@ const App = () => {
               </Link>
             </li>
 
-            {showUserBoard && (
-              <li className="nav-item">
-                <Link to={"/user"} className="nav-link">
-                  User Board
-                </Link>
-              </li>
-            )}
-
             {showAdminBoard && (
               <li className="nav-item">
                 <Link to={"/admin"} className="nav-link">
@@ -128,10 +121,10 @@ const App = () => {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/profile" component={Profile} />
-            <Route path="/admin" component={BoardAdmin} />
-            <Route path="/challenge" component={Challenge} />
+            <Route exact path="/challenge" component={Challenge} />
+            <Route exact path="/instructions" component={Instructions} />
             <Route path="/practice/:step/:exercise" component={BoardUser} />
-            <Route path="/instructions" component={Instructions} />
+            <Route path="/admin" component={BoardAdmin} />
           </Switch>
         </div>
       </div>

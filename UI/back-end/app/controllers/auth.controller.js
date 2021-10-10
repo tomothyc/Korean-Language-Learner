@@ -65,6 +65,7 @@ exports.signin = (req, res) => {
       id: user._id,
       username: user.username,
       email: user.email,
+      studentNumber: user.studentNumber,
       accessToken: token,
       isAdmin: user.isAdmin
     });
