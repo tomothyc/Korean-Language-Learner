@@ -4,7 +4,6 @@ import Letters from "./Learn-menu/Letters";
 import Syllables from "./Learn-menu/Syllables";
 import Words from "./Learn-menu/Words";
 import Dictation from "./Learn-menu/Dictation";
-import "./dropdown.css";
 
 const LearnDropdown = () => {
   const [showDropDown, setShowDropDown] = useState(false);
