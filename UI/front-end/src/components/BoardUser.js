@@ -65,7 +65,9 @@ const BoardUser = (props) => {
 
   const startGame = () => {
     getVocab(step, exercise);
-    setGameStarted(true);
+    setTimeout(() => {
+      setGameStarted(true);
+    }, 1000);
     setMessage("");
   };
 
