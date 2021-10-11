@@ -43,11 +43,6 @@ require("./app/routes/auth.routes")(app);
 require("./app/routes/hangul.routes")(app);
 
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../front-end/build'))
-}
-
-
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
