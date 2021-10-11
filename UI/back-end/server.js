@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const db = require("./app/models/index.js");
 
 db.mongoose
-  .connect(
+  .connect( //process.env.MONGODB_URI ||
     `mongodb+srv://Anthony:k7lznBZf2bgm33wp@cluster0.ijy1h.mongodb.net/UI?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
@@ -41,6 +41,8 @@ app.get("/", (req, res) => {
 // routes
 require("./app/routes/auth.routes")(app);
 require("./app/routes/hangul.routes")(app);
+
+
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
